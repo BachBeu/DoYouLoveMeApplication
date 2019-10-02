@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 style="position: absolute; left:220px; top:175px" >Do You Love Me?</h1>
+<button type="button" onclick="yesClick()" value="Yes" style="position:absolute; left:285px; top:235px;">Yes</button>
+<button id="btnNo" type="button" onmouseover="noHover()" value="No" style="position:absolute; left:360px; top:235px;">No</button>
+<script>
+    function yesClick() {
+        alert("Yes, you are right!")
+    }
+    function noHover() {
+        var x = Math.round(Math.random() * window.innerWidth);
+        //Math.random(): trả về một số ngẫu nhiêm từ 0 và 1
+        //Math.round(): Hàm trả về giá trị của một số làm tròn đến số nguyên gần nhất
+        //innerWidth && innerHeight: lấy chiều rộng và chiều cao của khung hình hiện tại
+        var y = Math.round(Math.random() *window.innerHeight);
+        document.getElementById('btnNo').style.left = x + 'px';
+        document.getElementById('btnNo').style.top = y + 'px';
+    }
+</script>
+</body>
+</html>
